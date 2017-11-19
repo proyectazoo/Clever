@@ -1,0 +1,95 @@
+﻿@using PruebaProyecto.Models
+@model IEnumerable<Productos>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    @*<style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+        input {
+            width: 200px;
+            higth:100px;
+            
+        }
+
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+            table th {
+                background-color: #B8DBFD;
+                color: #333;
+                font-weight: bold;
+            }
+
+            table th, table td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            table, table table td {
+                border: 0px solid #ccc;
+            }
+    </style>*@
+</head>
+<body>
+
+    @using (Html.BeginForm("Index", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+        <form class="form-inline">
+            <div class="form-group">
+                <div class="checkbox">
+                    <input type="file" name="postedFile" class="form-control" />
+                    <a href="~/Views/Producto/Mostrarinventario.cshtml"><input type="submit" class="form-control" value="Importar y mostrar" /></a>
+                    @Html.ActionLink("Mostrar", "Mostrarinventario","Producto")
+                </div>
+                </div>
+        </form>
+    }
+
+
+    @*@if (Model.Count() > 0)
+    {*@
+        @*<hr />
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>Nombre Producto</th>
+                            <th>Precio</th>
+                            <th>Marca</th>
+                            <th>Color</th>
+                            <th>Descripcion</th>
+                            <th>Stock</th>
+                            <th>Categoria</th>
+                            <th>Precio Original</th>
+                        </tr>
+                        @foreach (Productos customer in Model)
+                        {
+                            <tr>
+                                <td>@customer.Id_Producto</td>
+                                <td>@customer.Nombre_Producto</td>
+                                <td>@customer.Precio_Producto</td>
+                                <td>@customer.ID_Marca</td>
+                                <td>@customer.Color_Producto</td>
+                                <td>@customer.Descripcion_Producto</td>
+                                <td>@customer.Stock_Producto</td>
+                                <td>@customer.ID_Categoria</td>
+                                <td>@customer.PrecioOriginal_Producto</td>
+                            </tr>
+                        }
+                    </table>
+    }*@
+</body>
+
+</html>
+

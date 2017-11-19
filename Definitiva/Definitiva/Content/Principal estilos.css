@@ -1,0 +1,56 @@
+﻿* {
+    font-family: helvetica;
+    color: #000;
+}
+
+/*para el recuadro del formulario*/
+form {
+    width: 35%;
+    border: 1px solid #ccc;
+    margin: 1px;
+    padding: 20px;
+    background: #D5B669;
+}
+/*tamaño a la letra, que el recuadro quede abajo */
+label {
+    font-size: 20px;
+    display: block;
+    width: 100%
+}
+/*para los recuadros*/
+input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
+    border: :1px solid #ccc;
+    border-radius: 10px;
+}
+    /*borde del recuadro*/
+    input:focus {
+        border-radius:1px;
+        width:100%;
+    }
+
+    input[type="submit"] {
+        margin-bottom: 0;
+        /*boton iniciar sesion*/
+        background: #D57E69;
+        color: #fff;
+        border: none;
+        width: 30%;
+        padding: 10px;
+    }
+
+
+        input[type="submit"]:hover {
+            background: #ccc;
+        }
+
+header {
+    background: #8B9197;
+    color: #000;
+}
+

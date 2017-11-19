@@ -1,0 +1,35 @@
+﻿@model PruebaProyecto.Controllers.ProductoController
+@using PruebaProyecto.Models
+@{
+    ViewBag.Title = "Mostrarinventario";
+}
+
+<h2>Mostrarinventario</h2>
+<hr />
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Id </th>
+            <th>Nombre Producto</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Color</th>
+            <th>Descripcion</th>
+            <th>Stock</th>
+            <th>Categoria</th>
+            <th>Precio Original</th>
+        </tr>
+        @foreach (Productos customer in Model.Mostrarinventario())
+        {
+            <tr>
+                <td>@customer.Id_Producto</td>
+                <td>@customer.Nombre_Producto</td>
+                <td>@customer.Precio_Producto</td>
+                <td>@customer.ID_Marca</td>
+                <td>@customer.Color_Producto</td>
+                <td>@customer.Descripcion_Producto</td>
+                <td>@customer.Stock_Producto</td>
+                <td>@customer.ID_Categoria</td>
+                <td>@customer.PrecioOriginal_Producto</td>
+            </tr>
+        }
+    </table>
