@@ -1,5 +1,5 @@
-﻿@model PruebaProyecto.Controllers.ProductoController
-@using PruebaProyecto.Models
+﻿@using PruebaProyecto.Models
+@model IEnumerable<Productos>
 @{
     ViewBag.Title = "Mostrarinventario";
 }
@@ -18,7 +18,7 @@
             <th>Categoria</th>
             <th>Precio Original</th>
         </tr>
-        @foreach (Productos customer in Model.Mostrarinventario())
+        @foreach (Productos customer in Model)
         {
             <tr>
                 <td>@customer.Id_Producto</td>

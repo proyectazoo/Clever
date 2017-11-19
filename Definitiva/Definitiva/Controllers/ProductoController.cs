@@ -61,7 +61,7 @@ namespace PruebaProyecto.Controllers
             return View(customers);
         }
         
-        public List<Productos> Mostrarinventario()
+        public ActionResult Mostrarinventario()
         {
             List<Productos> inventario = new List<Productos>();
 
@@ -93,7 +93,7 @@ namespace PruebaProyecto.Controllers
                     inventario.Add(productos);
                 }               
             }
-            return inventario;
+            return View(inventario);
         }
       
 
