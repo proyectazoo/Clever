@@ -15,7 +15,7 @@ namespace Definitiva.Controllers
 {
     public class RolesController : Controller
     {
-        // GET: Roles
+        // GET: Creacion de Roles
         [HttpGet]
         public ActionResult CrearRoles()
         {
@@ -23,7 +23,7 @@ namespace Definitiva.Controllers
             return View();
         }
 
-
+        //Get: Creacion de Roles
         [HttpPost]
         public ActionResult CrearRoles(CrearRol modelo)
         {
@@ -33,12 +33,45 @@ namespace Definitiva.Controllers
                     (new RoleStore<IdentityRole>(DB));
 
                 var NuevoRol = RoleManager.Create(new IdentityRole(modelo.Rol));
-                
-                var usermanager = new UserManager<ApplicationUser>
-                    (new UserStore<ApplicationUser>(DB));
+
             }
             return View(modelo);
         }
+
+
+        // GET: Asinacion de Roles
+        [HttpGet]
+        public ActionResult AsignacionRoles()
+        {
+
+            return View();
+        }
+
+        // GET: Asinacion de Roles
+        
+        [HttpPost]
+        public ActionResult AsignacionRoles(AsignarRol modelo)
+        {
+            using (ApplicationDbContext DB = new ApplicationDbContext())
+            {
+                var usermanager = new UserManager<ApplicationUser>
+                    (new UserStore<ApplicationUser>(DB));
+
+                //Agregar Usuario a rol
+                var Asignacion = usermanager.AddToRole(modelo.IdUsuario, modelo.RolAsignado);
+
+                //usar una query donde coloque el rut y me entrege su id en una variable y es utilizarla para vincular la id del usuario con el rol
+
+
+            }
+
+
+            return View(modelo);
+        }
+
+
+
+
 
         // GET: Roles/Details/5
         public ActionResult Details(int id)

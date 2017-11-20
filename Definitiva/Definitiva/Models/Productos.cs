@@ -56,7 +56,7 @@ namespace PruebaProyecto.Models
         public void llenarbase(List<Productos> x)
         {
             //List<CustomerModel> customers = new List<CustomerModel>();
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4LVFM2D\SQLEXPRESS;Initial Catalog=Prueba;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=JULITO;Initial Catalog=Prueba;Integrated Security=True"))
             {
                 foreach (Productos elemento in x)
                 {

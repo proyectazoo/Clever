@@ -1,9 +1,7 @@
 ﻿@using PruebaProyecto.Models
 
 
-@{
-    Layout = null;
-}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +49,7 @@
             <div class="form-group">
                 <div class="checkbox">
                     <input type="file" name="postedFile" class="form-control" />
-                    <a href="~/Views/Producto/Mostrarinventario.cshtml"><input type="submit" class="form-control" value="Importar y mostrar" /></a>
+                    <a href="~/Views/Producto/Mostrarinventario.cshtml"><input type="submit" class="form-control" value="Importar" /></a>
                     @Html.ActionLink("Mostrar", "Mostrarinventario","Producto")
                 </div>
                 </div>

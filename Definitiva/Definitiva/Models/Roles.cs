@@ -14,6 +14,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Definitiva.Models
 {
+    //Lista la creacion de roles 
     public class CrearRol
     {
         [Required]
@@ -42,6 +43,9 @@ namespace Definitiva.Models
         [Required]
         [Display(Name = "Asignacion de Rol")]
         public string RolAsignado { get; set; }
+        [Required]
+        [Display(Name = "Nombre del usuario")]
+        public string IdUsuario { get; set; }
 
     }
 

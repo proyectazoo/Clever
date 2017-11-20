@@ -292,6 +292,7 @@
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Producto\Mostrarinventario.cshtml" />
     <Content Include="Views\Roles\CrearRoles.cshtml" />
+    <Content Include="Views\Roles\AsignacionRoles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

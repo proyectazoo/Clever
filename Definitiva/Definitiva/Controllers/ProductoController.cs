@@ -8,7 +8,8 @@ using System.Web.Mvc;
 using PruebaProyecto.Models;
 
 namespace PruebaProyecto.Controllers
-{
+{   
+    [Authorize]
     public class ProductoController : Controller
     {
         // GET: Producto
@@ -65,7 +66,7 @@ namespace PruebaProyecto.Controllers
         {
             List<Productos> inventario = new List<Productos>();
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4LVFM2D\SQLEXPRESS;Initial Catalog=Prueba;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=JULITO;Initial Catalog=Prueba;Integrated Security=True"))
             {              
                 string q = "Select * from Productos";
 

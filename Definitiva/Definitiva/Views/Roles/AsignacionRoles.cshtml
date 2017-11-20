@@ -1,0 +1,34 @@
+﻿@model Definitiva.Models.AsignarRol
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Administracion De Roles</title>
+</head>
+<body>
+    <div> 
+        <h1>Asignacion de Roles</h1>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(modelo => modelo.RolAsignado)
+            @Html.TextBoxFor(modelo => modelo.RolAsignado)
+        </div>
+        <div>
+            @Html.LabelFor(modelo => modelo.IdUsuario)
+            @Html.TextBoxFor(modelo => modelo.IdUsuario)
+        </div>
+
+
+            <input type="submit" value="Crear Rol" class="btn btn-default" />
+    }
+
+</body>
+</html>
