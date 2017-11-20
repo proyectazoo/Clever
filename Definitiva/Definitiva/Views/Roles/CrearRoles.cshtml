@@ -1,0 +1,38 @@
+﻿@using Definitiva.Models
+@model CrearRol
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Administracion De Roles</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Creacion de Roles
+        </h1>
+    </div>
+    <div>
+
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(modelo => modelo.Rol)
+                @Html.TextBoxFor(modelo => modelo.Rol)
+            </div>
+            <input type="submit" value="Crear Rol" class="btn btn-default" />
+        }
+
+
+
+
+
+    </div>
+</body>
+</html>
