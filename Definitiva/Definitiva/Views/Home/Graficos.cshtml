@@ -1,0 +1,19 @@
+﻿@model Definitiva.Models.RangoFechasModel
+@{
+    ViewBag.Title = "About";
+
+}
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(Model => Model.Fecha1)
+        @Html.EditorFor(Model => Model.Fecha1)
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.Fecha2)
+        @Html.EditorFor(Model => Model.Fecha2)
+    </div>
+    <input type="submit" value="Enviar" />
+
+}

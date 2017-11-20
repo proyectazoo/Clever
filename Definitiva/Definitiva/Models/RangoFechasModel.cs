@@ -5,7 +5,9 @@ using System.Web;
 
 namespace Definitiva.Models
 {
-    public class ReporteFechasModel
+    public class RangoFechasModel
     {
+        public string Fecha1 { get; set; }
+        public string Fecha2 { get; set; }
     }
 }
